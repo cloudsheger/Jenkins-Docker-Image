@@ -2,19 +2,11 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = "YOUR_DOCKERHUB_USERNAME/YOUR_DOCKERHUB_REPO:YOUR_DOCKER_IMAGE_TAG"
-        DOCKER_HUB_CREDENTIALS = credentials('DOCKER_HUB_CREDS_ID')
+        DOCKER_IMAGE_NAME = "cloudsheger/jenkins-docker:v3"
+        DOCKER_HUB_CREDENTIALS = credentials('cloudsheger-ID-DOCKERHUB')
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                script {
-                    // Checkout your source code repository here if needed
-                    // For example: git credentialsId: 'GIT_CREDENTIALS_ID', url: 'https://github.com/your/repo.git'
-                }
-            }
-        }
 
         stage('Build and Push Docker Image') {
             steps {
