@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE_NAME = "cloudsheger/jenkins-docker:v3"
-        DOCKER_HUB_CREDENTIALS = credentials('cloudsheger-ID-DOCKERHUB')
+        DOCKER_HUB_CREDENTIALS = credentials('CLOUDSHEGER-DOCKERHUB')
     }
 
     stages {
